@@ -117,7 +117,7 @@ contract DSCEngine is ReentrancyGuard {
     /**
      * @param tokenCollateralAddress The address of the token to deposit as collateral
      * @param amountCollateral The amount of collateral to deposit
-     * @param amountDscToMint The amount of decentralized stablecoin to mint 
+     * @param amountDscToMint The amount of decentralized stablecoin to mint
      * @notice thus function will deposit your collateral and mint your DSC in one transaction
      */
     function depositCollateralAndMintDsc(
@@ -172,7 +172,7 @@ contract DSCEngine is ReentrancyGuard {
 
     /**
      * @notice follows CEI
-     * @param amountDscToMint The amount of decentralized stablecoin to mint 
+     * @param amountDscToMint The amount of decentralized stablecoin to mint
      * @notice they must have more collateral value than the minimum threshold
      */
     function mintDsc(uint256 amountDscToMint) public moreThanZero(amountDscToMint) nonReentrant {
@@ -255,7 +255,7 @@ contract DSCEngine is ReentrancyGuard {
     }
 
     /**
-     * Returns how close to liquidation a user is 
+     * Returns how close to liquidation a user is
      * If a user goes below 1, then they can get liquidated
      */
     function _healthFactor(address user) private view returns (uint256) {
